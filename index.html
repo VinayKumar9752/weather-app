@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-card">
+        <div class="search-section">
+          <input
+            type="text"
+            id="cityInput"
+            class="city-input"
+            placeholder="Enter City Name..."
+          />
+          <button id="searchBtn" class="search-btn">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="weather-info" id="weatherInfo">
+          <div class="location">
+            <h1 id="cityName">Enter City</h1>
+            <p id="date"></p>
+          </div>
+
+          <div class="temperature-section">
+            <div class="icon-container">
+              <img
+                id="weatherIcon"
+                src=""
+                alt="Weather Icon"
+                class="weather-icon"
+              />
+            </div>
+            <div class="temp-value">
+              <span id="temperature">--</span>
+              <span class="unit">°C</span>
+            </div>
+            <p id="description" class="description">--</p>
+          </div>
+
+          <div class="details-grid">
+            <div class="detail-item">
+              <span class="detail-label">Feels Like</span>
+              <span id="feelsLike" class="detail-value">--°C</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Humidity</span>
+              <span id="humidity" class="detail-value">--%</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Wind Speed</span>
+              <span id="windSpeed" class="detail-value">-- km/h</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Pressure</span>
+              <span id="pressure" class="detail-value">-- hPa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="error-message" id="errorMessage"></div>
+      </div>
+    </div>
+
+    <script type="module" src="dist/app.js"></script>
+  </body>
+</html>
